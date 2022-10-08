@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+
+        body{
+
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            height: 100vh;
+            width: 100vw;
+            border-width: 0.8rem;
+            
+
+        }
+        main{
+
+            width: 30vw;
+            text-align: center;
+            border:2px solid black;
+            background-color: beige;
+            padding: 6rem 5rem;
+            border-radius: 1rem;
+
+
+        }
+        h2{
+
+            font-size: 1rem;
+            
+        }
+
+        .btn1{
+
+            background-color: linear rgb(0, 89, 99);
+            color: rgb(17, 19, 20);
+            margin: 1rem;
+            text-transform: capitalize;
+        }
+
+        .buttonwrapper{
+
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+padding: 1rem;
+
+
+        }
+        #gamearea{
+
+
+
+
+height: 160vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        #buttonnewgame{
+
+            margin: 2rem 0;
+        }
+        #attempts,#guess{
+
+            color: red;
+        }
+        .info{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+   <div id="welcomescreen">
+
+    <h2>Guess the random number bw 1-100</h2>
+
+    <img src="./guess.png " alt="" height="150px" width="150px">
+
+<section id="eventsection">
+
+<h2>Select difficulty</h2>
+
+<div class="buttonwrapper">
+
+<button class="btn1">Easy : 10 attempts</button>
+<button class="btn2">hard: 5 attempts</button>
+</div>
+</section>
+   
+</div>
+
+   <div id="gamearea">
+
+
+<div id="buttonnewgame">
+
+    <button class="newbtn">New game</button>
+</div>
+
+
+<section>
+<h3 id="textoutput">Your guess</h3>
+<input type="number" id="inputbox" min="1" max="10" placeholder="enter your guess" onchange="compareguess()">
+</section>
+
+
+<section class="stats">
+
+<div class="info">
+    <p>number of previous attempts</p>
+    <span id="attempts">0</span>
+</div>
+
+
+<div class="info">
+    <p>number of previous guess</p>
+    <span id="guess">0</span>
+</div>
+</section>
+
+
+   </div>
+
+
+    </main>
+
+   <script src="./index.js"></script>
+</body>
+</html>
